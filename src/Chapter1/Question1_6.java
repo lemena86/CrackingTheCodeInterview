@@ -1,3 +1,5 @@
+package Chapter1;
+
 public class Question1_6 {
 
     static String stringCompression(String word) {
