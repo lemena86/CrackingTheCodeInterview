@@ -32,7 +32,7 @@ public class Question1_2 {
         Map<Character, Integer> map = wordToMap(a);
         for (int i = 0; i < b.length(); i++) {
             char letter = b.charAt(i);
-            if (!map.containsKey(letter) || map.get(letter) == 0) {
+            if (!map.   containsKey(letter) || map.get(letter) == 0) {
                 return false;
             }
             map.put(letter, map.get(letter) - 1);
