@@ -81,12 +81,22 @@ public class LinkedList {
     public void removeMiddle() {
         Node cursor1 = head, cursor2 = head, prev = null;
         while (cursor2.getNext() != null) {
-            if(cursor2.getNext().getNext() == null) break;
+            if (cursor2.getNext().getNext() == null) break;
             prev = cursor1;
             cursor1 = cursor1.getNext();
             cursor2 = cursor2.getNext().getNext();
         }
         prev.setNext(cursor1.getNext());
+    }
+
+    public boolean deleteNode(Node n) {
+        if (n == null || n.getNext() == null) {
+            return false;
+        }
+        Node next = n.getNext();
+        n.setData(next.getData());
+        n.setNext(next.getNext());
+        return true;
     }
 
 
