@@ -1,8 +1,6 @@
 package Chapter10;
 
-/**
- * Created by nisum on 1/23/18.
- */
+
 public class Question3 {
 
     public static int search(int[] array, int value, int left, int rigth) {

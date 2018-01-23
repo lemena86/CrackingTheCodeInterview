@@ -1,8 +1,6 @@
 package Chapter10;
 
-/**
- * Created by nisum on 1/22/18.
- */
+
 public class Question1 {
 
     public static void merge(int[] array1, int[] array2) {

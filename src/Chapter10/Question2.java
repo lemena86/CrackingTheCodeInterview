@@ -4,9 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by nisum on 1/22/18.
- */
+
 public class Question2 {
     public static String[] sort(String[] array) {
         int length = array.length;
