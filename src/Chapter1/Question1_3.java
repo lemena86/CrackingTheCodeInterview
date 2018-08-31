@@ -8,7 +8,25 @@ import java.util.Map;
  * Created by mena on 06-12-17.
  */
 public class Question1_3 {
-    public static void replaceSpaces(char[] str, int trueLength) {
+
+    static String replaceWhiteSpaces(String word, int trueLength) {
+        char[] array = word.toCharArray();
+        for (int i = trueLength - 1; i >= 0; i--) {
+            if (array[i] == ' ') {
+                 for (int j = array.length - 1; j > i + 2; j--) {
+                    array[j] = array[j - 2];
+                 }
+                array[i] = '%';
+                array[i + 1] = '2';
+                array[i + 2] = '0';
+            }
+
+        }
+        return new String(array);
+    }
+
+    public static String replaceSpaces(String stri, int trueLength) {
+        char[]str = stri.toCharArray();
         int spaceCount = 0, index, i = 0;
         for (i = 0; i < trueLength; i++) {
             if (str[i] == ' ') {
@@ -28,22 +46,14 @@ public class Question1_3 {
                 index--;
             }
         }
+        return new String(str);
     }
 
-    public static int findLastCharacter(char[] str) {
-        for (int i = str.length - 1; i >= 0; i--) {
-            if (str[i] != ' ') {
-                return i;
-            }
-        }
-        return -1;
-    }
 
     public static void main(String[] args) {
-        String str = "Mr John Smith    ";
-        char[] arr = str.toCharArray();
-        int trueLength = findLastCharacter(arr) + 1;
-        replaceSpaces(arr, trueLength);
-        //System.out.println("\"" + AssortedMethods.charArrayToString(arr) + "\"");
+        String word = "Mr John Smith    ";
+        int trueLength = 13;
+        System.out.println(replaceSpaces(word, trueLength));
+        System.out.println(replaceWhiteSpaces(word, trueLength));
     }
 }
