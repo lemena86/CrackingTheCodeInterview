@@ -1,8 +1,8 @@
-package Chapter4.Q4_01_Route_Between_Nodes;
+package Chapter4;
 
 import java.util.Objects;
 
-class Node {
+public class Node {
     private Node adjacent[];
     public int adjacentCount;
     private String vertex;

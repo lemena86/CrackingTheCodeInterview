@@ -1,4 +1,4 @@
-package Chapter4.Q4_01_Route_Between_Nodes;
+package Chapter4;
 
 public class Graph {
     public static int MAX_VERTICES = 6;
